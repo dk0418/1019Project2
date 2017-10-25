@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/fr_home_relative_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#595959"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="tel: 010-7347-5434"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/fr_home_textview_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/fr_home_textview_sir"
+            android:text="고객명: 김혜경"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fr_home_textview_sir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="님"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fr_home_relative_myinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fr_home_relative_user"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="12dp">
+
+        <ImageView
+            android:id="@+id/fr_home_imageview_myinfo"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/image_red_dot"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/fr_home_imageview_myinfo"
+            android:text="내 정보"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Relative2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fr_home_relative_user"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border_mainlist_outline"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fr_home_recyclerview_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:overScrollMode="never">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/icon_goDirect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fr_home_relative_direct"
+        android:paddingLeft="12dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/border_main_top_2dp">
+        <ImageView
+            android:id="@+id/fr_home_imageview_godirect"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/image_red_dot"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/fr_home_imageview_godirect"
+            android:text="바로가기"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/fr_home_relative_buttongroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fr_home_relative_direct">
+
+        <LinearLayout
+            android:id="@+id/fr_home_linear_buttonMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TableRow>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_mainlist_right"
+                        android:text="충전"
+                        android:textColor="#595959"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:drawableLeft="@drawable/main_icon_1"
+                        android:gravity="right|center_vertical"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_mainlist_right"
+                        android:text="요금관리"
+                        android:textColor="#595959"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:drawableLeft="@drawable/main_icon_2"
+                        android:gravity="right|center_vertical"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:text="이벤트"
+                        android:textColor="#595959"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:drawableLeft="@drawable/main_icon_3"
+                        android:gravity="right|center_vertical" />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_mainlist_top_right"
+                        android:text="요금제안내"
+                        android:textColor="#595959"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:drawableLeft="@drawable/main_icon_4"
+                        android:gravity="right|center_vertical"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_mainlist_top_right"
+                        android:text="부가서비스"
+                        android:textColor="#595959"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:drawableLeft="@drawable/main_icon_5"
+                        android:gravity="right|center_vertical" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/fr_home_relative_centerline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/border_main_top_2dp"
+        android:layout_below="@+id/fr_home_relative_buttongroup">
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/Relative6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fr_home_relative_centerline">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/viewflipper_main_event" />
+    </RelativeLayout>
+</LinearLayout>
